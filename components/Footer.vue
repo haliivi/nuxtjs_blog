@@ -1,0 +1,20 @@
+<template>
+    <footer class="footer bg-dark fixed-bottom" data-bs-theme="dark">
+        <div class="container">
+            <p class="my-0 float-end">
+                <a href="#">Наверх</a>
+            </p>
+            <span class="text-muted">Агентство по разработке потрясных сайтов на bootstrap, drf и nuxtJS. А это просто наш блог.</span>
+        </div>
+    </footer>
+</template>
+
+<script>
+    export default {
+        name: 'Footer'
+    }
+</script>
+
+<style scoped>
+
+</style>
