@@ -24,7 +24,7 @@
                 <hr>
                 <Comments />
             </div>
-            <Aside />
+            <Aside :tags=tags :aside=aside />
         </div>
     </div>
 </template>
@@ -42,8 +42,12 @@
         },
         async asyncData({params}) {
             const post = await axios.get(`http://127.0.0.1:8000/api/posts/${params.slug}`);
+            const tags = await axios.get(`http://127.0.0.1:8000/api/tags/`);
+            const aside = await axios.get(`http://127.0.0.1:8000/api/aside/`);
             return {
                 post: post.data,
+                tags: tags.data,
+                aside: aside.data,
             }
         },
     }
