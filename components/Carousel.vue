@@ -7,21 +7,21 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-            <img src="https://picsum.photos/id/142/800/300" class="d-block w-100" alt="...">
+            <img src="http://placeimg.com/800/300/any" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
                 <h5>Назване 1-ого слайда</h5>
                 <p>Некоторый текст для 1-ого слайда.</p>
             </div>
             </div>
             <div class="carousel-item">
-            <img src="https://picsum.photos/id/52/800/300" class="d-block w-100" alt="...">
+            <img src="http://placeimg.com/800/300/dump" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
                 <h5>Назване 2-ого слайда</h5>
                 <p>Некоторый текст для 2-ого слайда.</p>
             </div>
             </div>
             <div class="carousel-item">
-            <img src="https://picsum.photos/id/62/800/300" class="d-block w-100" alt="...">
+            <img src="http://placeimg.com/800/300/age" class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
                 <h5>Назване 3-го слайда</h5>
                 <p>Некоторый текст для 3-го слайда.</p>
