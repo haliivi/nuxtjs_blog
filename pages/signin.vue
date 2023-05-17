@@ -17,15 +17,15 @@
 
 <script>
 export default {
-  layout: "post_detail",
-  data() {
-    return {
-      login: {
-        username: '',
-        password: ''
-      },
-    }
-  },
+    layout: "post_detail",
+    data() {
+        return {
+            login: {
+                username: '',
+                password: ''
+            },
+        }
+    },
     methods: {
         async userLogin() {
             try {
