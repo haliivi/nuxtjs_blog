@@ -71,6 +71,9 @@ export default {
       }
     }
   },
+  plugins: [
+	{ src: '~/plugins/vuelidate' },
+  ],
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     transpile: [

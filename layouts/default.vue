@@ -18,7 +18,14 @@
             Navbar,
             Footer,
             Carousel,
-        }
+        },
+        head() {
+            return {
+                link: [
+                    { rel: "canonical", href: `http://localhost:3000${this.$route.path}`}
+                ],
+            }
+        },
     };
 </script>
 
