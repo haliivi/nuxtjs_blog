@@ -22,18 +22,24 @@
                 <ul class="navbar-nav">
                     <form class="d-flex" role="search">
                         <input name="q" v-model="q" class="form-control me-2" type="search" placeholder="Поиск..." aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit" @click.stop.prevent="submit()">Поиск</button>
+                        <button class="btn btn-outline-success me-2" type="submit" @click.stop.prevent="submit()">Поиск</button>
                     </form>
-                    <li class="nav-item">
-                        <nuxt-link class="nav-link" to="/signup">Регистрация</nuxt-link>
-                    </li>
-                    <span class="navbar-text">Username</span>
-                    <li class="nav-item">
-                        <nuxt-link class="nav-link" to="/signin">Вход</nuxt-link>
-                    </li>
-                    <li class="nav-item">
-                        <nuxt-link class="nav-link" to="/signout">Выход</nuxt-link>
-                    </li>
+                    <span class="navbar-text" v-if="user">{{user.username}}</span>
+                    <client-only>
+                        <span v-if="loggedIn">
+                            <li class="nav-item">
+                                <nuxt-link class="nav-link" to="/signout">Выход</nuxt-link>
+                            </li>
+                        </span>
+                        <span v-else class="d-flex">
+                            <li class="nav-item">
+                                <nuxt-link class="nav-link" to="/signin">Вход</nuxt-link>
+                            </li>
+                            <li class="nav-item">
+                                <nuxt-link class="nav-link" to="/signup">Регистрация</nuxt-link>
+                            </li>
+                        </span>
+                    </client-only>
                 </ul>
             </div>
         </div>
@@ -51,6 +57,14 @@
         methods: {
             submit() {
                 this.$router.push('/search?q='+this.q);
+            }
+        },
+        computed: {
+            loggedIn() {
+                return this.$auth.loggedIn
+            },
+            user() {
+                return this.$auth.user
             }
         }
     }

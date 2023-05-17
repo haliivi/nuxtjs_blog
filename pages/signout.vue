@@ -1,13 +1,11 @@
 <template>
-  <h1>Привет, это страница выхода</h1>
+  <div></div>
 </template>
 
 <script>
-export default {
-  name: "contact"
-}
+    export default {
+        async created() {
+            await this.$auth.logout()
+        }
+    }
 </script>
-
-<style scoped>
-
-</style>
